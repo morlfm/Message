@@ -4,26 +4,15 @@ require 'pry-byebug'
 def self.deposit(value,cpf,name)
 
   begin
-      # Initialize connection variables.
-
-      # password = String('root')
-
-      # byebug
+    
       # Initialize connection object.
       client = Mysql2::Client.new(
   host: '127.0.0.1',
   port: 3306,
   database: 'test',
   username: 'root'
-  # password: 'root',
-  # reconnect: true
 )
       puts 'Successfully created connection to database.'
-
-
-      # client.query('CREATE TABLE balance (id INT(11) UNSIGNED  PRIMARY KEY, name VARCHAR(50), value DOUBLE);')
-      # puts 'Finished creating table.'
-
 
       resultSet = client.query('SELECT * from balance;')
          resultSet.each do |row|
