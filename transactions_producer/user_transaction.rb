@@ -8,7 +8,7 @@ class User_transaction
        transaction.cpf = json['cpf']
        transaction.name = json['name']
        transaction.value = json['value']
+      end
+    end
   end
- end
-end
 end
